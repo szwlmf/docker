@@ -26,20 +26,3 @@ docker修改镜像私服以阿里云为例
 拉去镜像：docker pull 镜像名:版本号
 删除镜像：docker rmi 镜像id
 
-容器（相当于镜像的实例）命令：
-查看容器：docker ps 查看正在运行的容器
-					docker ps -a 查看所有的容器，包括之前创建过，但是已经退出的
-创建容器: 
-				#-i 以-i为参数创建的容器，如果没有客户端连接，依然保持容器运行，-t是分配一个终端。 --name  名称；redis 以哪个镜像创建容器；/bin/bash  分配的终端; 退出后，容器就不存在了
-				docker run -it --name=n redis:banbenhao
-				#-d是后台运行，执行 run命令后，不会立刻进入容器，退出容器后，容器依然存在。
-				docker run -id --name=n2 redis:banbenhao
-				#给上面创建的n2分配一个终端
-				docker exec -it n2 /bin/bash 
-					
-进入容器：
-启动容器：
-停止容器：
-删除容器：
-查看容器信息：
-

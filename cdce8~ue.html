@@ -1,0 +1,21 @@
+docker安装
+# 1、yum 包更新到最新
+yum update
+# 2、安装需要的软件包，yum-uti1提供yum-config-manager功能，另外两个是devicemapper驱动依赖的
+yum instal1 -yyum-utils device-mapper-persistent-data 1vm2
+# 3、设置yunr源
+yum-config-manager --add-repo https://download.docker.com/1inux/centos/docker-ce.repo
+# 4、安装docker，出现输入的界面都按 y
+yum instal1 -y docker-ce
+# 5、查看docker版本，验证是否验证成功
+docker -v
+
+docker修改镜像私服以阿里云为例
+登录阿里云--》控制台---》左侧三个横杠---》产品与服务--》搜索镜像--》选择容器镜像服务---》选择对应系统---》将对应系统下的命令粘贴复制执行
+
+容器操作命令：
+启动docker： systemctl start docker
+停止：        systemctl stop docker
+设置开机自启动：systemctl enable docker
+查看docker状态： systemctl status docker
+
