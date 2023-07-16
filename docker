@@ -36,10 +36,25 @@ docker修改镜像私服以阿里云为例
 				docker run -id --name=n2 redis:banbenhao
 				#给上面创建的n2分配一个终端
 				docker exec -it n2 /bin/bash 
-					
-进入容器：
-启动容器：
-停止容器：
-删除容器：
-查看容器信息：
+启动容器：docker start name
+停止容器：docker stop name
+删除容器 ：docker rm name
+查看容器信息：docker inspect name
+
+
+
+
+容器的数据卷：数据交互
+配置数据卷：docker run -it --name=redis -v 宿主机目录（文件）：容器内目录（文件） redis:last
+						1、目录必须是绝对路径
+						2、目录不存在，自动创建
+						3、可以挂载多个数据卷
+数据卷容器：
+						1、启动数据卷容器 docker run -it --name=c3 -v /volume centos:7 /bin/bash
+						2、创建启动容器1  2 使用--volumes-from设置数据卷参数
+						docker run -it --name=c1 --volumes-from c3 centos:7 /bin/bash
+						docker run -it --name=c2 --volumes-from c3 centos:7 /bin/bash
+-p 设置端口映射，宿主机端口：容器端口
+
+
 
