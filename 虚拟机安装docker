@@ -1,6 +1,19 @@
-1、centocs,redhat 使用yum命令，其他使用apt-get命令
+1、centos,redhat 使用yum命令，其他使用apt-get命令
 1.1 下载更新docker运行环境
 yum install -y yum-utils device-mapper-persistent-data lvm2
 1.2 设置docker镜像云 路径
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+安装成功：
+[root@localhost szw]# yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+Loaded plugins: fastestmirror, langpacks
+adding repo from: http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+grabbing file http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo to /etc/yum.repos.d/docker-ce.repo
+repo saved to /etc/yum.repos.d/docker-ce.repo
+1.3 更新yum缓存
+yum makecache fast
+1.4 安装docker-ce(社区版)
+yum -y install docker-ce
+
+
+
 
