@@ -1,3 +1,6 @@
-1、之心命令
+1、centocs,redhat 使用yum命令，其他使用apt-get命令
+1.1 下载更新docker运行环境
 yum install -y yum-utils device-mapper-persistent-data lvm2
+1.2 设置docker镜像云 路径
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
