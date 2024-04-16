@@ -15,5 +15,51 @@ yum makecache fast
 yum -y install docker-ce
 
 
+linux卸载docker
+docker卸载
+1.查看docker状态
+systemctl status docker
+
+
+
+2.停止docker
+如果docker是运行状态，先停调docker。
+systemctl stop docker
+
+
+
+3.查看docker相关文件
+1.查看yum安装的docker文件包
+yum list installed |grep docker
+
+
+
+2.查看docker相关的rpm源文件
+rpm -qa |grep docker
+
+
+
+4. 删除所有安装的docker文件包
+yum -y remove xxx
+
+
+
+5. 删除docker的镜像文件
+默认在/var/lib/docker目录下
+/var/lib/docker
+
+
+
+删除命令：
+rm -rf /var/lib/docker
+
+该路径下已经没有docker文件,至此，docker已卸载完成。
+————————————————
+
+                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+                        
+原文链接：https://blog.csdn.net/qq_44936392/article/details/126603557
+
+
 
 
