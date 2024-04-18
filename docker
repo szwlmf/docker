@@ -2,7 +2,7 @@ docker安装
 # 1、yum 包更新到最新
 yum update
 # 2、安装需要的软件包，yum-uti1提供yum-config-manager功能，另外两个是devicemapper驱动依赖的
-yum instal1 -yyum-utils device-mapper-persistent-data 1vm2
+yum install -yum-utils device-mapper-persistent-data 1vm2
 # 3、设置yunr源
 yum-config-manager --add-repo https://download.docker.com/1inux/centos/docker-ce.repo
 # 4、安装docker，出现输入的界面都按 y
